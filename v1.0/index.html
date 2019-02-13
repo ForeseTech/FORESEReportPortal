@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+	<head>
+		<title>FORESE Report Portal</title>
+	</head>
+	<style>
+		body, html{
+			padding: 0;
+			margin: 0;
+		}
+		#head{
+			position: fixed;
+			top: 0;
+			width: 100%;
+			border-bottom: 1px solid black;
+		}
+		#pageHead{
+			text-align: center;
+			padding: 1% 0%;
+			font-size: 135%;
+			font-family: "Verdana", sans-serif;
+		}
+		
+		#reportFormForm{
+			width: 100%;
+			margin-top: 8%;
+		}
+		#numInput{
+			width: 30%;
+			padding-top: .5%;
+			padding-bottom: .5%;
+			margin-left: 35%;
+		}
+		#submitButton{
+			width: 10%;
+			padding: .5% 1% .5% 1%;
+			margin: 1% auto;
+			display: block;
+		}
+		#text{
+			width: 70%;
+			margin: 15% auto 0% auto;
+			text-align: center;
+			font-family: "Verdana", sans-serif;
+		}
+	</style>
+	<body>
+		
+		<div id="head">
+			<header id="pageHead">Report Generation</header>
+			<div id="timer"></div>
+		</div>
+		
+		<p id="text">Enter your registration number in the field and click the 'Generate PDF' button. If your registration number fails to yield proper results, please contact members of FORESE.</p>
+		
+		<div id="reportForm">
+			<form id="reportFormForm" action="reportGen.php" method="post">
+				<input type="number" name="numberInput" id="numInput">
+				<button type="submit" id="submitButton">Generate PDF</button>
+			</form>
+		</div>
+		
+	</body>
+</html>
