@@ -6,6 +6,12 @@
 
 	$regnumber=$_POST['regnumber'];
 	$student = get_student_information($regnumber);
+
+	if($student == NULL) {
+		header("Location: error.html", true, 303);
+		die();
+	}
+
 	$total_dept_studs = get_total_dept_students($student["dept"]);
 
 ?>
