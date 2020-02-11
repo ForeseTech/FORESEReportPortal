@@ -1,2 +1,3 @@
-sql_cpnnections.php
+# Files To Be Ignored
+*sql_connections.php
 *Store
