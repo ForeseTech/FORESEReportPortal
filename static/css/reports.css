@@ -28,6 +28,15 @@ ul {
 	margin-left: 10%;
 }
 
+ul li {
+	margin-bottom: 1.5%;
+}
+
+p {
+	width: 60%;
+	margin: 0 auto;
+}
+
 @media only screen and (max-width: 1000px) {
 	
 	.report-card {
