@@ -1,10 +1,12 @@
 <?php
 
 	require("src/sql-connections.php");
+	require("src/sql-functions.php");
 	require("src/calculations.php");
 
 	$regnumber=$_POST['regnumber'];
 	$student = get_student_information($regnumber);
+	$total_dept_studs = get_total_dept_students($student["dept"]);
 
 ?>
 <html>
@@ -19,8 +21,8 @@
 
 		<div class="report-card">
 
-			<strong>Name:</strong> <?php echo $name; ?><br>
-			<strong>Department:</strong> <?php echo $dept; ?><br>
+			<strong>Name:</strong> <?php echo $student["name"]; ?><br>
+			<strong>Department:</strong> <?php echo $student["dept"]; ?><br>
 			<strong>Registration Number:</strong> <?php echo $regnumber; ?><br>
 			<br><br>
 
@@ -35,13 +37,13 @@
 
 				<tr>
 					<td><b>Your Score</b></td>
-					<td><b><?php echo $tech; ?></b></td>
+					<td><b><?php echo $student["score"]; ?></b></td>
 				</tr>
 			</table>
 
 			<br>
 	
-			<p>58 students have attempted the test in the department.<br>Arjun has scored more than <strong><?php echo $percentile; ?>%</strong> of students in their department.<br><br>The candidate was tested on questions from the quantitative, verbal and technical categories. Technical questions counted for 50% of the questions asked to the candidate.</p>
+			<p><?php echo $total_dept_studs; ?> students have attempted the test in the <?php echo $student["dept"]; ?> department.<br><?php echo $student["name"]; ?> has scored <em>more than</em> <strong><?php echo $student["percentile"]; ?>%</strong> of students in the <?php echo $student["dept"]; ?> department.<br><br>The candidate was tested on questions from the quantitative, verbal and technical categories. Technical questions counted for 50% of the questions asked to the candidate.</p>
 
 			<br><br><br>
 
@@ -51,7 +53,7 @@
 				<li>These results <strong><em>must</em></strong> be shown to your interviewer on the day of the Mock Placements.</li>
 				<li>We recommend you take a <strong>screenshot</strong> of this page and store it in your phone.</li>
 				<li>Without this report, you will <strong><em>not</em></strong> be allowed to attend your interview.</li>
-				<li>For more queries, visit <a href="http://www.forese.in/students"> the official FORESE website.</a></li>
+				<li>For more any, visit <a href="http://www.forese.co.in"> the official FORESE website.</a></li>
 			</ul>
 
 		</div>
