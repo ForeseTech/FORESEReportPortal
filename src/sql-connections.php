@@ -7,8 +7,8 @@
 /* This function inits a connection variable and returns it. */
 function getConnection(){
 	$server = "localhost";
-	$username = "arjun1001";
-	$password = "Robinandsupermanare110%sexy";
+	$username = "reports";
+	$password = "Reports123123123!";
 	$database = "MOCKS20";
 
 	$connection=new PDO("mysql:host=$server;dbname=$database", $username, $password);

@@ -5,8 +5,8 @@ body {
  
 .report-card{
 	display: block;
-	width: 50%;
-	border: 2px solid black;
+	width: 100%;
+	border: none;
 
 	margin: 1% auto;
 	padding: 3% 0%;
@@ -14,7 +14,7 @@ body {
 }
 
 table {
-	width: 50%;
+	width: 35%;
 	margin: 0 auto;
 }
 
@@ -24,16 +24,18 @@ table, th, td {
 }
 
 ul {
-	width: 80%;
-	margin-left: 10%;
+	width: 45%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 ul li {
-	margin-bottom: 1.5%;
+	width: 100%;
+	margin-bottom: 1%;
 }
 
 p {
-	width: 60%;
+	width: 50%;
 	margin: 0 auto;
 }
 
