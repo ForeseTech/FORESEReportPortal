@@ -18,7 +18,7 @@
 <html>
 
 	<head>
-		<title>Your Result | FORESE</title>
+		<title><?php echo $regnumber; ?> | FORESE</title>
 		<link href="static/css/reports.css" rel="stylesheet">
 		<link rel="icon" href="../students/img/favicon.png">
 	</head>
